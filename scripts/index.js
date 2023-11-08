@@ -27,11 +27,33 @@ function add_task_function() {
     </button>
 `;
 
-    //delete the task
+    //delete a task
     const deleteButton = task_element.lastElementChild; 
     deleteButton.addEventListener("click", function() {
         task_element.remove();
     });
+
+    const editButton = task_element.querySelector('.edit-button');
+    const taskName = task_element.querySelector('.task-name');
+
+    editButton.addEventListener("click", function() {
+        const newName = prompt("Edit the task:", taskName.textContent);
+        if (newName !== null && newName.trim() !== "") {
+            taskName.textContent = newName;
+        }
+    });
+    
+    const taskCheckbox = task_element.querySelector('.task-checkbox');
+    taskCheckbox.addEventListener("change", function() {
+        if (taskCheckbox.checked) {
+            task_element.classList.remove("active");
+            task_element.classList.add("completed");
+        } else {
+            task_element.classList.remove("completed");
+            task_element.classList.add("active");
+        }
+    });
+
 
     task_list.appendChild(task_element);
 
