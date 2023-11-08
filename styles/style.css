@@ -1,0 +1,62 @@
+.everything{
+    font-family: 'Courier New', Courier, monospace;
+    margin: auto;
+    position: absolute;
+    width:min(95vw,500px);
+    left:0;
+    right: 0;
+    top:30px;
+}
+
+.container{
+    padding:2em 2.5em;
+    background-color: white;
+    box-shadow: 0 1em 2em rgba(0,0,0,0.3);
+    border-radius: 0.8em;
+}
+
+.container h1{
+    margin-bottom: 15px;
+    color: blue;
+}
+
+.wrapper{
+    position: relative;
+    display: grid;
+    grid-template-columns: 8fr 4fr;
+    gap: 1em;
+}
+
+.wrapper .input{
+    width: 100%;
+    background-color: transparent;
+    color: black;
+    font: 1em;
+    border: none;
+    border-bottom: 2px solid white;
+    padding: 1em 0.5em;
+}
+
+.wrapper input:focus{
+    outline: none;
+    border-color: black;
+}
+
+.wrapper button{
+    position: relative;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    font-weight: 400;
+    font-size: 1.5em;
+    background-color: blue;
+}
+
+.error-message{
+    text-align: center;
+    background-color: aliceblue;
+    color: black;
+    margin-top:1.5em;
+    padding:1em 0;
+    display: none;
+}
