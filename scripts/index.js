@@ -66,7 +66,8 @@ function add_task_function() {
 
 
     task_list.appendChild(task_element);
-
+    //delete task after being added to the list
+    input_text.value = "";
 };
 
 add_button.addEventListener("click", add_task_function);

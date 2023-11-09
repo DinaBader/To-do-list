@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital@1&display=swap');
 .everything {
     font-family: 'Courier New', Courier, monospace;
     margin: auto;
@@ -10,9 +11,9 @@
 
 .container {
     padding: 2em;
-    background-color: #f9f9f9;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    border-radius: 8px;
+    background-color: #e4e1e1cb;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 1);
+    border-radius: 15px;
 }
 
 .container h1 {
@@ -34,7 +35,7 @@
     border: none;
     border-bottom: 2px solid #1b3970;
     padding: 1em;
-    border-radius: 4px;
+    border-radius: 20px;
 }
 
 .input_text:focus {
@@ -51,7 +52,7 @@
     background-color: #1b3970;
     color: #fff;
     padding: 10px 20px;
-    border-radius: 4px;
+    border-radius: 20px;
     transition: background-color 0.3s;
     margin: 10px;
 }
@@ -74,6 +75,10 @@
     text-decoration: line-through;
 }
 
+.task-name{
+    font-family: 'Lato', sans-serif;
+}
+
 .tasks-list {
     margin-top: 1em;
     border-radius: 0.5em;
@@ -85,12 +90,33 @@
     background-color: #fff;
     padding:0.8em 1em;
     display: grid;
-    grid-template-columns: 1fr 8fr 2fr 2fr;
-    border-radius: 0.5em;
+    grid-template-columns: 1fr 9fr 2fr 2fr;
+    border-radius: 15em;
     box-shadow: 0 0.5em 1em rgba(0,0,0,0.05);
     align-items: center;
-    cursor: pointer;
     margin-bottom: 10px;
+}
+
+.task input[type="checkbox"]{
+    position: relative;
+    appearance: none;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    border: 2px solid #e1e1e1;
+    cursor: pointer;
+}
+
+.task input[type="checkbox"]:before{
+    content: "";
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top:50%;
+    left:50%;
+}
+
+.task input[type="checkbox"]:checked{
+    background-color: #1b3970;
 }
 
 .task .edit-button,
@@ -99,7 +125,7 @@
     color: #fff;
     padding: 5px 10px;
     border: none;
-    border-radius: 4px;
+    border-radius: 20px;
     cursor: pointer;
     margin: 10px;
 }
