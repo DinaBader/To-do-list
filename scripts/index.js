@@ -19,7 +19,7 @@ function add_task_function() {
     task_element.className = "task";
     task_element.innerHTML = `
     <input type="checkbox" class="task-checkbox">
-    <span class="task-name">${task_name}</span>
+    <span class="task-name" draggable="true">${task_name}</span>
     
     <button class="edit-button">
         <i class="fa-regular fa-keyboard"></i>
@@ -69,6 +69,7 @@ function add_task_function() {
     task_list.appendChild(task_element);
     //delete task after being added to the list
     input_text.value = "";
+
 };
 
 function filter_tasks() {

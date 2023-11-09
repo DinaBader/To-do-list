@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,500&display=swap');
 .everything {
     font-family: 'Courier New', Courier, monospace;
     margin: auto;
@@ -134,4 +135,13 @@
 .task .edit-button:hover,
 .task .delete-button:hover {
     background-color: #b421d1;
+}
+
+.filter-bar .filter-text{
+    font-family: 'Lora', serif;
+    margin-left: 10px;
+}
+
+.filter-bar .filter-select{
+    cursor: pointer;
 }
