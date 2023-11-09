@@ -33,6 +33,7 @@ function add_task_function() {
         task_element.remove();
     });
 
+    //edit task
     const editButton = task_element.querySelector('.edit-button');
     const taskName = task_element.querySelector('.task-name');
 
@@ -41,8 +42,16 @@ function add_task_function() {
         if (newName !== null && newName.trim() !== "") {
             taskName.textContent = newName;
         }
+        else{
+            error_message.style.display = "block";
+        setTimeout(() => {
+            error_message.style.display = "none"; 
+        }, 2000); 
+        return;
+        }
     });
     
+    //change class name when textbox is checked
     const taskCheckbox = task_element.querySelector('.task-checkbox');
     taskCheckbox.addEventListener("change", function() {
         if (taskCheckbox.checked) {
