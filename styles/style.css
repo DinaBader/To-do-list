@@ -75,10 +75,22 @@
 }
 
 .tasks-list {
-    background-color: #f2f2f2;
-    padding: 10px;
-    margin: 10px 0;
-    border-radius: 5px;
+    margin-top: 1em;
+    border-radius: 0.5em;
+    width: 100%;
+    position: relative;
+}
+
+.task {
+    background-color: #fff;
+    padding:0.8em 1em;
+    display: grid;
+    grid-template-columns: 1fr 8fr 2fr 2fr;
+    border-radius: 0.5em;
+    box-shadow: 0 0.5em 1em rgba(0,0,0,0.05);
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 10px;
 }
 
 .task .edit-button,
@@ -88,10 +100,9 @@
     padding: 5px 10px;
     border: none;
     border-radius: 4px;
-    margin-right: 5px;
     cursor: pointer;
+    margin: 10px;
 }
-
 
 
 .task .edit-button:hover,

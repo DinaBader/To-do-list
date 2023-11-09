@@ -19,6 +19,7 @@ function add_task_function() {
     task_element.innerHTML = `
     <input type="checkbox" class="task-checkbox">
     <span class="task-name">${task_name}</span>
+    
     <button class="edit-button">
         <i class="fa-regular fa-keyboard"></i>
     </button>
