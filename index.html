@@ -14,8 +14,16 @@
         <div class="everything">
             <div class="container">
                 <h1>Tasks</h1>
+                <div class="filter-bar">
+                    <label for="filter">Filter tasks:</label>
+                    <select id="filter" class="filter-select">
+                        <option value="all">All Tasks</option>
+                        <option value="completed">Completed Tasks</option>
+                        <option value="active">Active Tasks</option>
+                    </select>
+                </div>
                 <div class="wrapper">
-                    <input type="text" placeholder="Tasks" class="input_text"/>
+                    <input type="text" placeholder="To do" class="input_text"/>
                     <button class="add-button"> Add Task</button>
                 </div>
                 <div class="tasks-list"></div>

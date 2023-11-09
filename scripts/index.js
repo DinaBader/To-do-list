@@ -2,6 +2,7 @@ const add_button = document.getElementsByClassName("add-button")[0];
 const input_text = document.getElementsByClassName("input_text")[0];
 const error_message = document.getElementsByClassName("error-message")[0];
 const task_list = document.getElementsByClassName("tasks-list")[0]; 
+const filter_select=document.getElementsByClassName("filter-select")[0];
 
 function add_task_function() {
     const task_name = input_text.value.trim();
@@ -26,7 +27,7 @@ function add_task_function() {
     <button class="delete-button">
         <i class="fa-regular fa-trash-can"></i>
     </button>
-`;
+    `;
 
     //delete a task
     const deleteButton = task_element.lastElementChild; 
@@ -70,4 +71,26 @@ function add_task_function() {
     input_text.value = "";
 };
 
+function filter_tasks() {
+    const selectedOption = filter_select.value;
+
+    // Get all task elements
+    const tasks = task_list.getElementsByClassName("task");
+
+    // Show or hide tasks based on the selected filter
+    for (const task of tasks) {
+        const isCompleted = task.classList.contains("completed");
+        const isActive = !isCompleted;
+
+        if (selectedOption === "all" ||
+            (selectedOption === "completed" && isCompleted) ||
+            (selectedOption === "active" && isActive)) {
+            task.style.display = "grid";
+        } else {
+            task.style.display = "none";
+        }
+    }
+}
+
 add_button.addEventListener("click", add_task_function);
+filter_select.addEventListener("change", filter_tasks);
