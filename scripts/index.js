@@ -4,6 +4,7 @@ const error_message = document.getElementsByClassName("error-message")[0];
 const task_list = document.getElementsByClassName("tasks-list")[0]; 
 const filter_select=document.getElementsByClassName("filter-select")[0];
 
+
 function add_task_function() {
     const task_name = input_text.value.trim();
     if (!task_name) {
@@ -19,12 +20,12 @@ function add_task_function() {
     task_element.className = "task";
     task_element.innerHTML = `
     <input type="checkbox" class="task-checkbox">
-    <span class="task-name" draggable="true">${task_name}</span>
+    <span class="task-name draggable" draggable="true">${task_name}</span>
     
-    <button class="edit-button">
+    <button class="edit-button" draggable="true">
         <i class="fa-regular fa-keyboard"></i>
     </button>
-    <button class="delete-button">
+    <button class="delete-button" draggable="true">
         <i class="fa-regular fa-trash-can"></i>
     </button>
     `;
@@ -67,7 +68,6 @@ function add_task_function() {
 
 
     task_list.appendChild(task_element);
-    //delete task after being added to the list
     input_text.value = "";
 
 };
@@ -92,6 +92,7 @@ function filter_tasks() {
         }
     }
 }
+
 
 add_button.addEventListener("click", add_task_function);
 filter_select.addEventListener("change", filter_tasks);

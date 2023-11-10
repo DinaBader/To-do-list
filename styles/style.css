@@ -145,3 +145,21 @@
 .filter-bar .filter-select{
     cursor: pointer;
 }
+
+.filter-select {
+    padding: 3px;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.filter-bar {
+    margin-bottom: 20px;
+}
+
+.filter-select:hover {
+    border-color: #333;
+}
